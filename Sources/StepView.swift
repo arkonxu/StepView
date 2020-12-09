@@ -88,10 +88,6 @@ extension StepView: StepViewContainer {
         }
         selectedStep = step
     }
-
-    public func getStepCircleViewByPosition(position: Int) -> StepBaseCircleView {
-        stepViews[position];
-    }
 }
 
 // MARK:- Drawing logic
@@ -180,5 +176,9 @@ extension StepView {
         // to correct work of replace method
         let stepViewRect = CGRect(x: 0, y: 0, width: stepViewWidth, height: frame.height)
         self.stepViews = [StepBaseCircleView].init(repeating: StepBaseCircleView(frame: stepViewRect), count: numberOfSteps)
+    }
+
+    public func getStepCircleViewByPosition(position: Int) -> StepBaseCircleView {
+        stepViews[position];
     }
 }
