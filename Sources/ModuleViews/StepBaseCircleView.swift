@@ -8,7 +8,7 @@
 
 import UIKit
 
-class StepBaseCircleView: UIView {
+public class StepBaseCircleView: UIView {
     
     // MARK: - private properties
     private var path: UIBezierPath!
@@ -47,7 +47,7 @@ class StepBaseCircleView: UIView {
     }
     
     // MARK: - Drawing logic
-    override func draw(_ rect: CGRect) {
+    public override func draw(_ rect: CGRect) {
         createStepView()
     }
     

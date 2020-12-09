@@ -88,6 +88,10 @@ extension StepView: StepViewContainer {
         }
         selectedStep = step
     }
+
+    public func getStepCircleViewByPosition(position: Int) -> StepBaseCircleView {
+        stepViews[position];
+    }
 }
 
 // MARK:- Drawing logic
