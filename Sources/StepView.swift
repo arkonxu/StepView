@@ -15,7 +15,7 @@ open class StepView: UIView {
     private var stepViewWidth: CGFloat {
         return frame.width / CGFloat(numberOfSteps)
     }
-    private var stepViews = [StepBaseCircleView]()
+    public var stepViews = [StepBaseCircleView]()
     
     // MARK: - public properties
     @IBInspectable public var numberOfSteps: Int = 0
