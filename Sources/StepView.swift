@@ -178,7 +178,7 @@ extension StepView {
         self.stepViews = [StepBaseCircleView].init(repeating: StepBaseCircleView(frame: stepViewRect), count: numberOfSteps)
     }
 
-    public func getStepCircleViewByPosition(position: Int) -> StepBaseCircleView {
+    open func getStepCircleViewByPosition(position: Int) -> StepBaseCircleView {
         stepViews[position];
     }
 }
