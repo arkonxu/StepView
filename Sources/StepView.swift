@@ -61,7 +61,7 @@ open class StepView: UIView {
 
 // MARK: - Interface
 
-extension StepView: StepViewContainer {
+@objc public extension StepView: StepViewContainer {
     public func showNextStep() {
         moveTo(step: selectedStep + 1)
     }
@@ -92,7 +92,12 @@ extension StepView: StepViewContainer {
 
 // MARK:- Drawing logic
 
-extension StepView {
+@objc public extension StepView {
+
+    public func getStepCircleViewByPosition(position: Int) -> StepBaseCircleView {
+        stepViews[position];
+    }
+
     override open func draw(_ rect: CGRect) {
         prepareForDraw()
         createStepViews()
@@ -176,13 +181,5 @@ extension StepView {
         // to correct work of replace method
         let stepViewRect = CGRect(x: 0, y: 0, width: stepViewWidth, height: frame.height)
         self.stepViews = [StepBaseCircleView].init(repeating: StepBaseCircleView(frame: stepViewRect), count: numberOfSteps)
-    }
-}
-
-// MARK:- Drawing logic
-
-@objc public extension StepView {
-    func getStepCircleViewByPosition(position: Int) -> StepBaseCircleView {
-        stepViews[position];
     }
 }
