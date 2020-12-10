@@ -181,7 +181,7 @@ extension StepView {
 
 // MARK:- Drawing logic
 
-public extension StepView {
+@objc public extension StepView {
     func getStepCircleViewByPosition(position: Int) -> StepBaseCircleView {
         stepViews[position];
     }
