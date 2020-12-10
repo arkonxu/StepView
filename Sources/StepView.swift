@@ -61,7 +61,7 @@ open class StepView: UIView {
 
 // MARK: - Interface
 
-@objc public extension StepView: StepViewContainer {
+@objc extension StepView: StepViewContainer {
     public func showNextStep() {
         moveTo(step: selectedStep + 1)
     }
