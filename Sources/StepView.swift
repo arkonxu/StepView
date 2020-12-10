@@ -88,15 +88,15 @@ open class StepView: UIView {
         }
         selectedStep = step
     }
+
+    public func getStepCircleViewByPosition(position: Int) -> StepBaseCircleView {
+        stepViews[position];
+    }
 }
 
 // MARK:- Drawing logic
 
 @objc public extension StepView {
-
-    public func getStepCircleViewByPosition(position: Int) -> StepBaseCircleView {
-        stepViews[position];
-    }
 
     override open func draw(_ rect: CGRect) {
         prepareForDraw()
